@@ -1,12 +1,14 @@
-import { useState } from "react";
+import ToDoGroup from "./ToDoGroup";
+import ToDoGenerator from "./ToDoGenerator";
 
 function ToDoList() {
 
-    const [todoText, setTodoText] = useState("This is the first todo item.");
     
+
     return (
         <div>
-            <p>{todoText}</p>
+            <ToDoGroup></ToDoGroup>
+            <ToDoGenerator></ToDoGenerator>
         </div>
     );
 }
