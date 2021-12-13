@@ -1,6 +1,6 @@
 function ToDoItems(props) {
     return (
-        <div>
+        <div className="todoItemBorder">
             {props.todoItem}
         </div>
     );

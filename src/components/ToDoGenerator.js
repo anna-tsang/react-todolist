@@ -15,8 +15,8 @@ function ToDoGenerator(props){
 
     return(
         <form onSubmit={submitToDoText}>
-            <input type="text" onChange={handleToDoText}></input>
-            <input type="submit"></input>
+            <input type="text" onChange={handleToDoText} className="inputField"></input>
+            <input type="submit" className="button"></input>
         </form>
     );
 }
