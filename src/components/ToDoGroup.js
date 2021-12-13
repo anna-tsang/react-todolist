@@ -1,13 +1,14 @@
-import { useState } from "react";
 import ToDoItems from "./ToDoItems";
 
-function ToDoGroup() {
+function ToDoGroup(props) {
 
-    const [todoText, setTodoText] = useState("This is the first todo item.");
     return(
         <div>
-            <p>{todoText}</p>
-            <ToDoItems></ToDoItems>
+            {
+                (props.toDoTextList).map((item,index)=>(
+                    <ToDoItems key={item + index} todoItem={item}></ToDoItems>
+                ))
+            }
         </div>
         
     );

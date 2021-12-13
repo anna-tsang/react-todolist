@@ -1,9 +1,7 @@
-function ToDoItems() {
-    
-
+function ToDoItems(props) {
     return (
         <div>
-            
+            {props.todoItem}
         </div>
     );
 }

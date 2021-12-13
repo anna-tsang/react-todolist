@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function ToDoGenerator(){
+function ToDoGenerator(props){
 
-    const [todoText, setTodoText] = useState("");
+    const [toDoText, setTodoText] = useState("");
 
     function handleToDoText(event) {
         setTodoText(event.target.value);
@@ -10,9 +10,8 @@ function ToDoGenerator(){
 
     function submitToDoText(event) {
         event.preventDefault();
-        console.log(todoText);
+        props.updateToDoText(toDoText);
     }
-    
 
     return(
         <form onSubmit={submitToDoText}>
