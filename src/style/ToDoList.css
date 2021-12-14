@@ -43,7 +43,10 @@
 
 .delete-button{
   float: right;
+  border: 0px;
+  background-color: white;
 }
+
 
 .done{
   text-decoration: line-through;
