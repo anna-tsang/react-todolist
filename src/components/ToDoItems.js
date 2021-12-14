@@ -1,5 +1,6 @@
 import {useDispatch} from "react-redux";
 import {UPDATE_TODO_DONE, DELETE_TODO} from "../constants/constants";
+import "../style/ToDoList.css"
 
 function ToDoItems(props) {
 
@@ -15,9 +16,9 @@ function ToDoItems(props) {
     }
 
     return (
-        <div className="todoItemBorder" >
+        <div className="todo-item-border" >
             <span className={props.done? "done": null } onClick={todoDone}>{props.todoItem}</span>
-            <span><button onClick={deleteToDo} className="deleteButton">X</button></span>
+            <span><button onClick={deleteToDo} className="delete-button">X</button></span>
         </div>
     );
 }

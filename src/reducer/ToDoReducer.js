@@ -1,4 +1,5 @@
 import { UPDATE_CONTENT, UPDATE_TODO_DONE, DELETE_TODO } from "../constants/constants";
+import "../style/ToDoList.css"
 
 
 const initState = {toDoTextList: []};

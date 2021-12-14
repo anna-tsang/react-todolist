@@ -2,6 +2,7 @@ import { useState } from "react";
 import {useDispatch} from "react-redux";
 import {UPDATE_CONTENT} from "../constants/constants"
 import { v4 as uuidv4 } from "uuid";
+import "../style/ToDoList.css"
 
 function ToDoGenerator(props){
 
@@ -23,7 +24,7 @@ function ToDoGenerator(props){
 
     return(
         <div>
-            <input type="text" placeholder="Please input Todo List" value={toDoText} onChange={handleToDoText} className="inputField"></input>
+            <input type="text" placeholder="Please input Todo List" value={toDoText} onChange={handleToDoText} className="input-field"></input>
             <input type="submit" className="button" value="Add" onClick={submitToDoText}></input>
         </div>
     );

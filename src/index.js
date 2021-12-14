@@ -5,7 +5,7 @@ import {Provider} from "react-redux"
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ToDoReducer from "./reducer/ToDoReducer"
+import ToDoReducer from "./reducer/ToDoReducer";
 
 const store = createStore(ToDoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

@@ -1,5 +1,6 @@
 import ToDoItems from "./ToDoItems";
 import { useSelector } from "react-redux";
+import "../style/ToDoList.css"
 
 function ToDoGroup() {
     const toDoTextList = useSelector((state) => state.toDoTextList);
