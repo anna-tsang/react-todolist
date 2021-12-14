@@ -1,6 +1,7 @@
 import ToDoGroup from "./ToDoGroup";
 import ToDoGenerator from "./ToDoGenerator";
 import { useState } from "react";
+import "../style/ToDoList.css"
 
 function ToDoList() {
     const [toDoTextList, setToDoTextList] = useState([]);
