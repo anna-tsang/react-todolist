@@ -5,21 +5,21 @@ function ToDoGenerator(props){
     const [toDoText, setTodoText] = useState("");
 
     function handleToDoText(event) {
-        if(!(event.target.value === "")){
-            setTodoText(event.target.value);
-        }
+        setTodoText(event.target.value);
     }
 
     function submitToDoText(event) {
-        event.preventDefault();
-        props.updateToDoText(toDoText);
+        if(!(toDoText === "")){
+            props.updateToDoText(toDoText);
+        }
+        setTodoText("");
     }
 
     return(
-        <form onSubmit={submitToDoText}>
-            <input type="text" onChange={handleToDoText} className="inputField"></input>
-            <input type="submit" className="button"></input>
-        </form>
+        <div>
+            <input type="text" value={toDoText} onChange={handleToDoText} className="inputField"></input>
+            <input type="submit" className="button" value="Add" onClick={submitToDoText}></input>
+        </div>
     );
 }
 

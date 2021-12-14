@@ -21,7 +21,7 @@
   background-color: lightseagreen;
   color: white;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   margin-left: 5px;
 }
 
@@ -29,6 +29,7 @@
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px;
+  width: 40%;
 }
 
 .todoItemBorder{
@@ -37,4 +38,5 @@
   width: 60%;
   padding: 5px;
   border: 2px solid black;
+  word-wrap: break-word;
 }

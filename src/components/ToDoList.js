@@ -3,12 +3,10 @@ import ToDoGenerator from "./ToDoGenerator";
 import { useState } from "react";
 
 function ToDoList() {
-    const [toDoText, setTodoText] = useState([]);
-    const [toDoTextList] = useState([]);
+    const [toDoTextList, setToDoTextList] = useState([]);
 
     function updateToDoText(toDoText){
-        setTodoText(toDoText);
-        toDoTextList.push(toDoText);
+        setToDoTextList((prev) => ([...prev,toDoText]));
     }
 
     return (
