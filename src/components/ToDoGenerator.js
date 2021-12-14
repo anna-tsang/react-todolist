@@ -5,7 +5,9 @@ function ToDoGenerator(props){
     const [toDoText, setTodoText] = useState("");
 
     function handleToDoText(event) {
-        setTodoText(event.target.value);
+        if(!(event.target.value === "")){
+            setTodoText(event.target.value);
+        }
     }
 
     function submitToDoText(event) {
