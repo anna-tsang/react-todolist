@@ -40,3 +40,11 @@
   border: 2px solid black;
   word-wrap: break-word;
 }
+
+.deleteButton{
+  float: right;
+}
+
+.done{
+  text-decoration: line-through;
+}

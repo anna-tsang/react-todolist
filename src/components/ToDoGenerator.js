@@ -16,7 +16,7 @@ function ToDoGenerator(props){
         const id = uuidv4();
         const done = false;
         if(!(toDoText === "")){
-            dispatch({type: UPDATE_CONTENT, payload: {id: id, toDoText: toDoText, done: done}});
+            dispatch({type: UPDATE_CONTENT, payload: {id: id, text: toDoText, done: done}});
         }
         setTodoText("");
     }

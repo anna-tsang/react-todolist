@@ -6,7 +6,6 @@ import "../style/ToDoList.css"
 function ToDoList() {
     const [toDoTextList] = useState([]);
 
-
     return (
         <div>
             <ToDoGroup toDoTextList={toDoTextList}></ToDoGroup>
