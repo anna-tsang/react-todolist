@@ -6,7 +6,7 @@ function ToDoList() {
     const [toDoTextList, setToDoTextList] = useState([]);
 
     function updateToDoText(toDoText){
-        setToDoTextList((prev) => ([...prev,toDoText]));
+        setToDoTextList([...toDoTextList,toDoText]);
     }
 
     return (
