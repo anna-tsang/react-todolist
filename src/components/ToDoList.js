@@ -4,16 +4,13 @@ import { useState } from "react";
 import "../style/ToDoList.css"
 
 function ToDoList() {
-    const [toDoTextList, setToDoTextList] = useState([]);
+    const [toDoTextList] = useState([]);
 
-    function updateToDoText(toDoText){
-        setToDoTextList([...toDoTextList,toDoText]);
-    }
 
     return (
         <div>
             <ToDoGroup toDoTextList={toDoTextList}></ToDoGroup>
-            <ToDoGenerator updateToDoText={updateToDoText}></ToDoGenerator>
+            <ToDoGenerator></ToDoGenerator>
         </div>
     );
 }

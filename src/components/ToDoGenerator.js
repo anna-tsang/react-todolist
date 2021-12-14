@@ -1,8 +1,12 @@
 import { useState } from "react";
+import {useDispatch} from "react-redux";
+import {UPDATE_TODO_TEXT} from "../constants/constants"
+
 
 function ToDoGenerator(props){
 
     const [toDoText, setTodoText] = useState("");
+    const dispatch = useDispatch();
 
     function handleToDoText(event) {
         setTodoText(event.target.value);
@@ -10,7 +14,7 @@ function ToDoGenerator(props){
 
     function submitToDoText(event) {
         if(!(toDoText === "")){
-            props.updateToDoText(toDoText);
+            dispatch({type: UPDATE_TODO_TEXT, payload: toDoText});
         }
         setTodoText("");
     }
