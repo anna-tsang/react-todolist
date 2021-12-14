@@ -1,1 +1,1 @@
-export const UPDATE_TODO_TEXT = "todo/updateToDoText";
+export const UPDATE_CONTENT = "todo/update_content";

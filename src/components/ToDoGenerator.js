@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {useDispatch} from "react-redux";
-import {UPDATE_TODO_TEXT} from "../constants/constants"
-
+import {UPDATE_CONTENT} from "../constants/constants"
+import { v4 as uuidv4 } from "uuid";
 
 function ToDoGenerator(props){
 
@@ -13,15 +13,17 @@ function ToDoGenerator(props){
     }
 
     function submitToDoText(event) {
+        const id = uuidv4();
+        const done = false;
         if(!(toDoText === "")){
-            dispatch({type: UPDATE_TODO_TEXT, payload: toDoText});
+            dispatch({type: UPDATE_CONTENT, payload: {id: id, toDoText: toDoText, done: done}});
         }
         setTodoText("");
     }
 
     return(
         <div>
-            <input type="text" value={toDoText} onChange={handleToDoText} className="inputField"></input>
+            <input type="text" placeholder="Please input Todo List" value={toDoText} onChange={handleToDoText} className="inputField"></input>
             <input type="submit" className="button" value="Add" onClick={submitToDoText}></input>
         </div>
     );

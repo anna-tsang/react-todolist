@@ -8,7 +8,7 @@ function ToDoGroup() {
         <div>
             {
                 toDoTextList.map((item,index)=>(
-                    <ToDoItems key={item + index} todoItem={item}></ToDoItems>
+                    <ToDoItems key={item + index} todoItem={item.toDoText}></ToDoItems>
                 ))
             }
         </div>
