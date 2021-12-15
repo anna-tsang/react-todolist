@@ -9,7 +9,7 @@ export const addToDoItem = (item) => {
 }
 
 export const updateToDoItem = (item) => {
-    return api.put("/ToDoList/" + item.id, item);
+    return api.put("/ToDoList/" + item.id, !item.done);
 }
 
 export const deleteToDoItem = (id) => {
