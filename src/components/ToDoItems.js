@@ -8,7 +8,9 @@ function ToDoItems(props) {
     const dispatch = useDispatch();
 
     function updateToDo(){//naming
-        updateToDoItem(props).then((response) => {
+       
+        console.log(props.done);
+        updateToDoItem({id: props.id, text: props.text, done: !props.done}).then((response) => {
             dispatch({type: UPDATE_TODO, payload: response.data.id})
         })
     }

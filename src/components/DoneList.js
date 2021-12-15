@@ -10,7 +10,7 @@ function DoneList() {
             <h1>✔️Done List✔️</h1>
             {
                 toDoTextList.filter(item => item.done).map((item)=>
-                <ToDoItems key={item.id} todoItem={item.text} ></ToDoItems>)
+                <ToDoItems key={item.id} todoItem={item.text} id={item.id} done={item.done}></ToDoItems>)
             }
         </div>
     );

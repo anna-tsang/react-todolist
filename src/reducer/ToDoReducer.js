@@ -7,6 +7,7 @@ const initState = {toDoTextList: []};
 const ToDoReducer = ( state = initState, action) => {
     switch (action.type) {
         case ADD_TODO:
+            console.log(action.payload);
             return {toDoTextList: [...state.toDoTextList, action.payload]}; 
         case UPDATE_TODO: 
             return {
