@@ -8,6 +8,7 @@ function ToDoItems(props) {
 
     function updateToDo(){//naming
         dispatch({type: UPDATE_TODO, payload: props.id})
+        
     }
 
     function deleteToDo(){
@@ -15,9 +16,9 @@ function ToDoItems(props) {
     }
 
     return (
-        <div className="todo-item-border" >
-            <span className={props.done? "done": null } onClick={updateToDo}>{props.todoItem}</span>
-            <span><button onClick={deleteToDo} className="delete-button">X</button></span>
+        <div className="todo-item-border" onClick={updateToDo}>
+            <span className={props.done? "done": null } >{props.todoItem}</span>
+            <span><button onClick={deleteToDo} className="delete-button" type="submit">X</button></span>
         </div>
     );
 }

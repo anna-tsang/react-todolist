@@ -8,7 +8,7 @@ function ToDoList() {
 
     return (
         <div>
-            <h1>Todo List</h1>
+            <h1>🕒Todo List🕒</h1>
             <ToDoGroup toDoTextList={toDoTextList}></ToDoGroup>
             <ToDoGenerator></ToDoGenerator>
         </div>

@@ -22,13 +22,13 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/Done">
+          <Route exact path="/Done">
             <DoneList></DoneList>
           </Route>
-          <Route path="/UnDone">
+          <Route exact path="/UnDone">
             <UnDoneList></UnDoneList>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
           <ToDoList></ToDoList>
           </Route>
         </Switch>
