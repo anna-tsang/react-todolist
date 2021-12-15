@@ -1,4 +1,4 @@
-import { ADD_TODO, UPDATE_TODO, DELETE_TODO, MOVE_TODO, INIT_TODO } from "../constants/constants";
+import { ADD_TODO, UPDATE_TODO, DELETE_TODO, INIT_TODO ,UPDATE_CONTENT} from "../constants/constants";
 import "../style/ToDoList.css"
 
 
@@ -7,12 +7,11 @@ const initState = {toDoTextList: []};
 const ToDoReducer = ( state = initState, action) => {
     switch (action.type) {
         case ADD_TODO:
-            console.log(action.payload);
             return {toDoTextList: [...state.toDoTextList, action.payload]}; 
         case UPDATE_TODO: 
             return {
                 toDoTextList: state.toDoTextList.map(item => {
-                    if(item.id === action.payload){
+                    if(item.id === action.payload.data.id){
                         item.done = !item.done;
                     }
                     return item;
@@ -22,13 +21,18 @@ const ToDoReducer = ( state = initState, action) => {
                 toDoTextList: state.toDoTextList.filter(
                     item => item.id !== action.payload
                 )}; 
-        case MOVE_TODO:
-            return {
-                doneTextList: state.doneTextList.filter(
-                    item => item.done === action.payload
-                )};
         case INIT_TODO:
             return {toDoTextList:  action.payload}; 
+
+        case UPDATE_CONTENT:
+            return {
+                toDoTextList: state.toDoTextList.map(item => {
+                    if(item.id === action.payload.data.id){
+                        item.text = action.payload.data.text;
+                    }
+                    
+                    return item;
+            })};
         default:
             return state;
     }

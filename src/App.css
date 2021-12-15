@@ -2,20 +2,20 @@
   text-align: center;
 }
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1{
+  color: #cacaca;
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background-color: #383838;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+
+  color: #ffffff;
+  -webkit-transition: color 1500ms ease-in;
+  -ms-transition: color 1500ms ease-in;
+  transition: color 1500ms ease-in;
 }
 
 .button{
@@ -42,10 +42,6 @@
   word-wrap: break-word;
 }
 
-.delete-button{
-  float: right;
-}
-
 .done{
   text-decoration: line-through;
 }
@@ -53,16 +49,19 @@
 .navigation-tab{
   margin-left: 10px;
   text-decoration: none;
-  color: darkblue;
-  border: 1px solid gray;
-  padding: 5px;
+  color: pink;
+  border: 2px solid gray;
+  padding: 7px;
   border-radius: 3px;
+}
+
+.navigation-tab:hover{
+  background-color: rgb(88, 15, 15);
+  color: pink;
+  border: 2px solid rgb(88, 15, 15);
 }
 
 .navigation{
   text-align: left;
-}
-
-.navigation-tab:hover{
-  background-color: rgb(182, 255, 200);
+  margin-top: 20px;
 }

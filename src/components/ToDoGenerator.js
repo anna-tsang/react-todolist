@@ -3,6 +3,9 @@ import {useDispatch} from "react-redux";
 import {ADD_TODO} from "../constants/constants"
 import "../style/ToDoList.css"
 import { addToDoItem } from "../apis/ToDoList";
+import { Button } from 'antd';
+import { Input } from 'antd';
+import { FormOutlined } from '@ant-design/icons';
 
 function ToDoGenerator(){
 
@@ -13,7 +16,7 @@ function ToDoGenerator(){
         setTodoText(event.target.value);
     }
 
-    function submitToDoText(event) {
+    function submitToDoText() {
         if(!(toDoText.trim() === "")){
             addToDoItem({text: toDoText, done:false}).then((response)=>{
                 dispatch({type: ADD_TODO, payload: response.data})
@@ -24,8 +27,8 @@ function ToDoGenerator(){
 
     return(
         <div>
-            <input type="text" placeholder="Please input Todo List" value={toDoText} onChange={handleToDoText} className="input-field"></input>
-            <input type="submit" className="button" value="Add" onClick={submitToDoText}></input>
+            <Input size="large" placeholder="Please input Todo List" value={toDoText} onChange={handleToDoText} prefix={<FormOutlined />} />
+            <Button type="primary" onClick={submitToDoText} prefix={<FormOutlined />}>Add</Button >
         </div>
     );
 }
