@@ -1,4 +1,4 @@
-import { ADD_TODO, UPDATE_TODO, DELETE_TODO, MOVE_TODO } from "../constants/constants";
+import { ADD_TODO, UPDATE_TODO, DELETE_TODO, MOVE_TODO, INIT_TODO } from "../constants/constants";
 import "../style/ToDoList.css"
 
 
@@ -26,6 +26,8 @@ const ToDoReducer = ( state = initState, action) => {
                 doneTextList: state.doneTextList.filter(
                     item => item.done === action.payload
                 )};
+        case INIT_TODO:
+            return {toDoTextList:  action.payload}; 
         default:
             return state;
     }

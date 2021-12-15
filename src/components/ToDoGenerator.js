@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {useDispatch} from "react-redux";
 import {ADD_TODO} from "../constants/constants"
-import { v4 as uuidv4 } from "uuid";
 import "../style/ToDoList.css"
+import { addToDoItem } from "../apis/ToDoList";
 
 function ToDoGenerator(){
 
@@ -14,9 +14,10 @@ function ToDoGenerator(){
     }
 
     function submitToDoText(event) {
-        const id = uuidv4();
         if(!(toDoText.trim() === "")){
-            dispatch({type: ADD_TODO, payload: {id, text: toDoText, done: false}});
+            addToDoItem({text: toDoText, done:false}).then((response)=>{
+                dispatch({type: ADD_TODO, payload: response.data})
+            })
         }
         setTodoText("");
     }
