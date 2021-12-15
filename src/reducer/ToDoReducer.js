@@ -8,7 +8,7 @@ const ToDoReducer = ( state = initState, action) => {
     switch (action.type) {
         case ADD_TODO:
             return {toDoTextList: [...state.toDoTextList, action.payload]}; 
-        case UPDATE_TODO:
+        case UPDATE_TODO: //naming UPDATE_TODO
             return {toDoTextList: state.toDoTextList.map(item => {
                 if(item.id === action.payload){
                     item.done = !item.done;

@@ -48,3 +48,16 @@
 .done{
   text-decoration: line-through;
 }
+
+.navigation-tab{
+  margin-left: 10px;
+  text-decoration: none;
+  color: darkblue;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.navigation{
+  text-align: left;
+}
