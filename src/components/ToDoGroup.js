@@ -9,7 +9,7 @@ function ToDoGroup() {
         <div>
             {
                 toDoTextList.map((item,index)=>(
-                    <ToDoItems key={item + index} todoItem={item.text} id={item.id} done={item.done}></ToDoItems>
+                    <ToDoItems key={item.id} todoItem={item.text} id={item.id} done={item.done}></ToDoItems>
                 ))
             }
         </div>
