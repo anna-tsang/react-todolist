@@ -1,14 +1,14 @@
 import {useDispatch} from "react-redux";
-import {UPDATE_TODO_DONE, DELETE_TODO} from "../constants/constants";
+import {UPDATE_TODO, DELETE_TODO} from "../constants/constants";
 import "../style/ToDoList.css"
 
 function ToDoItems(props) {
 
     const dispatch = useDispatch();
 
-    function todoDone(){
+    function todoDone(){//naming
         
-        dispatch({type:UPDATE_TODO_DONE, payload: props.id})
+        dispatch({type:UPDATE_TODO, payload: props.id})
     }
 
     function deleteToDo(){

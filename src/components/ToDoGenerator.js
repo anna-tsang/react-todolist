@@ -1,10 +1,10 @@
 import { useState } from "react";
 import {useDispatch} from "react-redux";
-import {UPDATE_CONTENT} from "../constants/constants"
+import {ADD_TODO} from "../constants/constants"
 import { v4 as uuidv4 } from "uuid";
 import "../style/ToDoList.css"
 
-function ToDoGenerator(props){
+function ToDoGenerator(){
 
     const [toDoText, setTodoText] = useState("");
     const dispatch = useDispatch();
@@ -15,9 +15,8 @@ function ToDoGenerator(props){
 
     function submitToDoText(event) {
         const id = uuidv4();
-        const done = false;
-        if(!(toDoText === "")){
-            dispatch({type: UPDATE_CONTENT, payload: {id: id, text: toDoText, done: done}});
+        if(!(toDoText.trim() === "")){
+            dispatch({type: ADD_TODO, payload: {id, text: toDoText, done: false}});
         }
         setTodoText("");
     }
