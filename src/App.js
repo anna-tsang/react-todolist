@@ -16,9 +16,9 @@ function App() {
       <div>
         <nav className="navigation">
           <ul>
-              <Link to="/" className="navigation-tab">Home</Link>
-              <Link to="/Done" className="navigation-tab">Done</Link>
-              <Link to="/UnDone" className="navigation-tab">UnDone</Link>
+              <Link to="/" className="navigation-tab">ToDoList🕒</Link>
+              <Link to="/Done" className="navigation-tab">Done✔️</Link>
+              <Link to="/UnDone" className="navigation-tab">UnDone❌</Link>
           </ul>
         </nav>
         <Switch>

@@ -17,7 +17,7 @@ function ToDoItems(props) {
 
     return (
         <div className="todo-item-border" onClick={updateToDo}>
-            <span className={props.done? "done": null } >{props.todoItem}</span>
+            <span className={props.done? "done": null} >{props.todoItem}</span>
             <span><button onClick={deleteToDo} className="delete-button" type="submit">X</button></span>
         </div>
     );

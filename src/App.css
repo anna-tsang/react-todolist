@@ -62,3 +62,7 @@
 .navigation{
   text-align: left;
 }
+
+.navigation-tab:hover{
+  background-color: rgb(182, 255, 200);
+}
