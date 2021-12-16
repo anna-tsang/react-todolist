@@ -40,19 +40,19 @@ function ToDoItems(props) {
         setUpdatedContent("");
     }
 
-    const displayModal = () => {
+    function displayModal(){
         setIsModalVisible(true);
         setUpdatedContent(props.todoItem);
-    };
+    }
 
-    const handleOk = () => {
+    function handleOk() {
         setIsModalVisible(false);
         updateToDoText();
-    };
+    }
 
-    const handleCancel = () => {
+    function handleCancel() {
         setIsModalVisible(false);
-    };
+    }
 
     return (
         <div className="todo-item-border">
