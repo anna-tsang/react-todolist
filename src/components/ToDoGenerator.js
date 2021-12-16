@@ -18,7 +18,7 @@ function ToDoGenerator(){
 
     function submitToDoText() {
         if(!(toDoText.trim() === "")){
-            addToDoItem({text: toDoText, done:false}).then((response)=>{
+            addToDoItem({text: toDoText.trim(), done:false}).then((response)=>{
                 dispatch({type: ADD_TODO, payload: response.data})
             })
         }

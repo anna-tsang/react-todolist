@@ -21,8 +21,9 @@ function ToDoList() {
     return (
         <div>
             <h1>🕒Todo List🕒</h1>
-            <ToDoGroup toDoTextList={toDoTextList}></ToDoGroup>
             <ToDoGenerator></ToDoGenerator>
+            <ToDoGroup toDoTextList={toDoTextList}></ToDoGroup>
+            
         </div>
     );
 }

@@ -6,9 +6,6 @@ import { CloseCircleOutlined, EditOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 import { Modal, Input } from 'antd';
 
-
-
-
 function ToDoItems(props) {
 
     const dispatch = useDispatch();
@@ -32,8 +29,8 @@ function ToDoItems(props) {
     }
 
     function updateToDoText() {
-        if(!(updatedContent.trim() === "")){
-            updateToDoItem({id: props.id, text: updatedContent, done: props.done}).then((response) => {
+        if((updatedContent.trim() !== "")){
+            updateToDoItem({id: props.id, text: updatedContent.trim(), done: props.done}).then((response) => {
                 dispatch({type: UPDATE_CONTENT, payload: response})
             })
         }
@@ -53,6 +50,7 @@ function ToDoItems(props) {
     function handleCancel() {
         setIsModalVisible(false);
     }
+
 
     return (
         <div className="todo-item-border">

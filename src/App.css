@@ -8,9 +8,6 @@ h1{
 
 body{
   background-color: #383838;
-  -webkit-transition: background-color 1000ms linear;
-  -ms-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
 
   color: #ffffff;
   -webkit-transition: color 1500ms ease-in;
@@ -50,7 +47,7 @@ Input.input-field{
   margin-left: 10px;
   text-decoration: none;
   color: rgb(218, 39, 68);
-  border: 2px solid rgb(104, 103, 103);
+  border: 2px dashed rgb(104, 103, 103);
   padding: 7px;
   border-radius: 3px;
 }

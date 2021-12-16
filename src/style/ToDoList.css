@@ -38,6 +38,7 @@
 
 .done{
   text-decoration: line-through;
+  color: rgb(160, 156, 156);
 }
 
 .inline{
