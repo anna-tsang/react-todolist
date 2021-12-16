@@ -26,11 +26,11 @@ body{
   margin-left: 5px;
 }
 
-.input-field{
+Input.input-field{
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px;
-  width: 40%;
+  width: 450 ;
 }
 
 .todo-item-border{
@@ -49,15 +49,15 @@ body{
 .navigation-tab{
   margin-left: 10px;
   text-decoration: none;
-  color: pink;
-  border: 2px solid gray;
+  color: rgb(218, 39, 68);
+  border: 2px solid rgb(104, 103, 103);
   padding: 7px;
   border-radius: 3px;
 }
 
 .navigation-tab:hover{
   background-color: rgb(88, 15, 15);
-  color: pink;
+  color: rgb(170, 170, 170);
   border: 2px solid rgb(88, 15, 15);
 }
 

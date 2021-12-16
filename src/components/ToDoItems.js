@@ -7,13 +7,15 @@ import React, { useState } from 'react';
 import { Modal, Input } from 'antd';
 
 
+
+
 function ToDoItems(props) {
 
     const dispatch = useDispatch();
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [updatedContent, setUpdatedContent] = useState([]);
 
-    function updateToDoStatus(){//naming
+    function updateToDoStatus(){
         updateToDoItem({id: props.id, text: props.text, done: !props.done}).then((response) => {
             dispatch({type: UPDATE_TODO, payload: response})
         })
@@ -38,8 +40,9 @@ function ToDoItems(props) {
         setUpdatedContent("");
     }
 
-    const showModal = () => {
+    const displayModal = () => {
         setIsModalVisible(true);
+        setUpdatedContent(props.todoItem);
     };
 
     const handleOk = () => {
@@ -55,7 +58,7 @@ function ToDoItems(props) {
         <div className="todo-item-border">
             <span className={props.done? "done": null} onClick={updateToDoStatus} >{props.todoItem}</span>
             <CloseCircleOutlined size={"small"} type="primary" className="float-right" onClick={deleteToDo}></CloseCircleOutlined>
-            <EditOutlined size={"small"} type="primary"  className="float-right" onClick={showModal}></EditOutlined>
+            <EditOutlined size={"small"} type="primary" className="float-right" onClick={displayModal}></EditOutlined>
 
             <Modal title="Please input your content" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                 <Input style={{ width: 450 }} placeholder="Please input Todo List" value={updatedContent} onChange={handleContentChange} className="input-field"></Input>
