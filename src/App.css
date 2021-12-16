@@ -39,9 +39,6 @@ Input.input-field{
   word-wrap: break-word;
 }
 
-.done{
-  text-decoration: line-through;
-}
 
 .navigation-tab{
   margin-left: 10px;

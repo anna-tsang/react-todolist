@@ -36,9 +36,14 @@
   font-size: 17px;
 }
 
+.todo-item-border:hover{
+  background-color: #616161; ;
+  cursor:pointer;
+}
+
 .done{
-  text-decoration: line-through;
-  color: rgb(160, 156, 156);
+  text-decoration: line-through 3px solid rgb(165, 3, 3);
+  color: lightgray;
 }
 
 .inline{
@@ -58,11 +63,6 @@
   border-radius: 5px;
   padding: 5px;
   width: 40%;
-}
-
-
-.done{
-  text-decoration: line-through;
 }
 
 .Modal{
